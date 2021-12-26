@@ -8,7 +8,8 @@ router.get('/profile', authMiddleware.isLoggedIn, usersController.getUser);
 
 router.post('/profile', authMiddleware.isLoggedIn, usersController.updateUser)
 
-router.post('/register', authController.register );
+router.post('/register/step1', authController.registerStep1 );
+router.post('/register/step2', authController.registerStep2 );
 
 router.post('/login', authController.login );
 
